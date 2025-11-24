@@ -12,7 +12,7 @@ const people = [
     {fullName: "Albert Lee", raiting: 43, ideas: 671, followings: 78, followers: 231},
 ]
 
-var tableData = (data) => {
+var generatePeopleTable = (data) => {
     const tbody = document.getElementById("data-body")
 
     data.forEach((people, index) => {
@@ -90,5 +90,5 @@ var tableData = (data) => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    tableData(people)
+    generatePeopleTable(people)
 } )
