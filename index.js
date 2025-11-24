@@ -14,9 +14,6 @@ const people = [
 
 var tableData = (data) => {
     const tbody = document.getElementById("data-body")
-    tbody.innerHTML = ""
-
-var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
 
     data.forEach((people, index) => {
         const row = document.createElement("tr")
@@ -25,7 +22,7 @@ var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
         userBlock.classList.add("user-block")
         const avatarTd = document.createElement("img")
         avatarTd.classList.add("avatar")
-        avatarTd.src = "assets/userpics/avatar-" + avatarsNumbers[index % avatarsNumbers.length] + ".png"
+        avatarTd.src = "assets/userpics/avatar-" + (index+1) + ".png"
         
         const userInfo = document.createElement("div")
         userInfo.classList.add("user-info")
@@ -70,10 +67,10 @@ var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
         ratingIcon.classList.add("rating-icon")
         ratingIcon.src = "assets/icons/ratingIcon.png"
         const topString = document.createElement("div")
-        topString.classList.add("top-string")
+        topString.classList.add("name-btn-container")
         topString.append(nameSpan, btn)
         const bottomString = document.createElement("div")
-        bottomString.classList.add("bottom-string")
+        bottomString.classList.add("icon-rating-container")
         bottomString.append(ratingIcon, ratingSpan)
         
         const ideasTd = document.createElement("td")

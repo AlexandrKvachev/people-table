@@ -96,13 +96,13 @@ td {
     gap: 5px;
 }
 
-.top-string {
+.name-btn-container {
     display: flex; 
     align-items: center;
     gap: 5px; 
 }
 
-.bottom-string {
+.icon-rating-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
