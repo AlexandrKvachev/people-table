@@ -31,7 +31,7 @@ body {
 }
 
 .table-icon {
-    background-image: url('assets/backgroundImage.png');
+    background-image: url('assets/icons/backgroundImage.png');
     background-size: cover;
     width: 22px;
     height: 22px;
@@ -114,27 +114,20 @@ td {
     filter: brightness(0) saturate(100%) invert(60%) sepia(2%) saturate(0%) hue-rotate(0deg) brightness(61%) contrast(90%);
 }
 
-.botton {
-    padding: 10px 10px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    border-radius: 20px;
-}
-
-.not-subscribed {
+.sub-btn {
     background: rgb(174, 174, 174);
     border-radius: 20px;
     border: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
-.not-subscribed:hover {
-    background: rgb(125, 250, 125);
+.sub-btn:hover {
+    background: rgb(65, 179, 65);
 }
 
 .subscribed {
-    background: rgb(125, 250, 125);
+    background: rgb(65, 179, 65);
     border-radius: 20px;
     border: none;
     color: white;
@@ -142,7 +135,7 @@ td {
 }
 
 .subscribed:hover {
-    background: rgb(237, 101, 101);
+    background: rgb(156, 9, 9);
 }
 
 .on-table-headline {

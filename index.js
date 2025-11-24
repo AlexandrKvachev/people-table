@@ -25,7 +25,7 @@ var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
         userBlock.classList.add("user-block")
         const avatarTd = document.createElement("img")
         avatarTd.classList.add("avatar")
-        avatarTd.src = "assets/avatar-" + avatarsNumbers[index % avatarsNumbers.length] + ".png"
+        avatarTd.src = "assets/userpics/avatar-" + avatarsNumbers[index % avatarsNumbers.length] + ".png"
         
         const userInfo = document.createElement("div")
         userInfo.classList.add("user-info")
@@ -33,35 +33,32 @@ var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
         nameSpan.textContent = people.fullName
         nameSpan.classList.add("name")
         const btn = document.createElement("button")
-        btn.classList.add("sub-btn", "not-subscribed")
+        btn.classList.add("sub-btn")
         btn.textContent = "+"
 
         btn.addEventListener("click", () => {
-            if (btn.classList.contains("not-subscribed")) {
-                btn.classList.remove("not-subscribed")
-                btn.classList.add("subscribed")
-                btn.textContent = "followed"
-            }
-            else {
+            if (btn.classList.contains("subscribed")) {
                 btn.classList.remove("subscribed")
-                btn.classList.add("not-subscribed")
                 btn.textContent = "+"
-            }
-        })
-
-        btn.addEventListener("mouseenter", () => {
-            if (btn.classList.contains("not-subscribed")) {
-                btn.textContent = "follow"
-            } else if (btn.classList.contains("subscribed")) {
+            } else {
+                btn.classList.add("subscribed")
                 btn.textContent = "unfollow"
             }
         })
 
+        btn.addEventListener("mouseenter", () => {
+            if (btn.classList.contains("subscribed")) {
+                btn.textContent = "unfollow"
+            } else { 
+                btn.textContent = "follow"
+            }
+        })
+
          btn.addEventListener("mouseleave", () => {
-            if (btn.classList.contains("not-subscribed")) {
-                btn.textContent = "+"
-            } else if (btn.classList.contains("subscribed")) {
-                btn.textContent = "✓"
+            if (btn.classList.contains("subscribed")) {
+                btn.textContent = "✔"
+            } else {
+                btn.textContent = "+"   
             }
         })
 
@@ -71,7 +68,7 @@ var avatarsNumbers = [1,2,3,4,5,6,7,8,9,10,11]
 
         const ratingIcon = document.createElement("img")
         ratingIcon.classList.add("rating-icon")
-        ratingIcon.src = "assets/ratingIcon.png"
+        ratingIcon.src = "assets/icons/ratingIcon.png"
         const topString = document.createElement("div")
         topString.classList.add("top-string")
         topString.append(nameSpan, btn)
