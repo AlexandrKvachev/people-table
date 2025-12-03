@@ -16,8 +16,8 @@ html, body {
 }
 
 .header {
-    align-items: flex-end;
     display: flex;
+    align-items: flex-end;
     justify-content: flex-start;
     margin-bottom: 10px;
     max-width: 1000px;
