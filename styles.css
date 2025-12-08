@@ -1,9 +1,14 @@
 html, body {
-    background-color: rgb(155, 154, 154);
     height: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(90, 90, 90);
+    color: rgb(73, 72, 72);;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
 }
 
 .wrapper {
@@ -25,6 +30,12 @@ html, body {
     font-size: 17px;
     font-weight: 500;
     margin-left: 5px;
+}
+
+@media (max-width:480px) {
+    .header {
+        max-width: 90%;
+    }
 }
 
 .header-headline {
@@ -51,9 +62,35 @@ table {
     table-layout: fixed;
 }
 
+@media (max-width: 480px) {
+    table {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
+
 th {
     padding: 1px;
     background-color: #e6e6e6;
+}
+
+@media (max-width:480px) {
+    th, td {
+        display: flex;
+        flex-direction: row;
+        padding: 3px;
+        font-size: 12px;
+        width: 15%;
+        align-content: center;
+    }
+
+    tr {
+        display: flex;
+    }
+
+    td:first-of-type, th:first-of-type {
+        flex-grow: 1;
+    }
 }
 
 th, td {
@@ -67,8 +104,20 @@ td {
     padding: 5px;
 }
 
+@media (max-width: 480px) {
+    td {
+        padding: 4px;
+    }
+}
+
 th:last-of-type, td:last-of-type {
     padding-right: 20px;
+}
+
+@media (max-width: 480px) {
+    th:last-of-type, td:last-of-type {
+        padding-right: 5px;
+    }
 }
 
 tbody tr:nth-child(even){
@@ -86,6 +135,13 @@ tbody tr:nth-child(even){
     height: 50px;
 }
 
+@media (max-width: 480px) {
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 .user-info {
     display: flex;
     flex-direction: column;
@@ -97,6 +153,14 @@ tbody tr:nth-child(even){
     display: flex; 
     align-items: center;
     gap: 5px; 
+}
+
+@media (max-width:480px) {
+    .name {
+        max-width: 87px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
 .icon-rating-container {
@@ -112,7 +176,8 @@ tbody tr:nth-child(even){
 
 .sub-btn {
     background: rgb(174, 174, 174);
-    border-radius: 20px;
+    border-radius: 20px;    
+    font-size: 12px;
     border: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
